@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Digital Kiwi Hub - Affordable AI-powered websites & marketing for NZ cafes, tradies, cleaners & small businesses.">
+  <title>Digital Kiwi Hub | Websites & Marketing for NZ Small Businesses</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .mobile-menu {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+      .mobile-menu {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <!-- Navigation -->
+  <header class="bg-gray-950 text-white fixed top-0 left-0 w-full z-50 shadow">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Digital Kiwi Hub</h1>
+      <nav class="space-x-6 text-sm font-medium hidden md:flex desktop-nav">
+        <a href="#home" class="hover:text-green-400">Home</a>
+        <a href="#services" class="hover:text-green-400">Services</a>
+        <a href="#portfolio" class="hover:text-green-400">Portfolio</a>
+        <a href="#pricing" class="hover:text-green-400">Pricing</a>
+        <a href="#contact" class="hover:text-green-400">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button onclick="document.getElementById('mobileNav').classList.toggle('hidden')">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileNav" class="hidden md:hidden px-6 pb-4 mobile-menu">
+      <a href="#home" class="block py-2 text-sm hover:text-green-400">Home</a>
+      <a href="#services" class="block py-2 text-sm hover:text-green-400">Services</a>
+      <a href="#portfolio" class="block py-2 text-sm hover:text-green-400">Portfolio</a>
+      <a href="#pricing" class="block py-2 text-sm hover:text-green-400">Pricing</a>
+      <a href="#contact" class="block py-2 text-sm hover:text-green-400">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 px-6 text-center">
+    <h2 class="text-4xl md:text-6xl font-extrabold mb-6">Grow Your Small Business Online</h2>
+    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">We build beautiful, functional websites and digital solutions for NZ cafes, tradies, cleaners, and more. Empowered by AI and designed to help you work smarter, not harder.</p>
+    <a href="#pricing" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded">See Pricing</a>
+  </section>
+
+  <!-- Portfolio Showcase -->
+  <section id="portfolio" class="py-20 px-6 bg-gray-800">
+    <h3 class="text-3xl font-bold text-center mb-10">Sample Projects</h3>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <img src="images/cafe-site.jpg" alt="Cafe Website Sample" class="rounded-lg shadow" />
+      <img src="images/cleaner-site.jpg" alt="Cleaning Business Website" class="rounded-lg shadow" />
+      <img src="images/tradie-site.jpg" alt="Tradie Website" class="rounded-lg shadow" />
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 px-6">
+    <h3 class="text-3xl font-bold text-center mb-10">Our Services</h3>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded-lg shadow">
+        <h4 class="text-xl font-bold mb-2">Website Development</h4>
+        <p class="text-gray-300">Custom, fast, mobile-friendly websites built with AI for NZ cafés, cleaners, tradies, and more.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow">
+        <h4 class="text-xl font-bold mb-2">Ecommerce Store Setup</h4>
+        <p class="text-gray-300">Launch your own online store with full support and training for easy order and product management.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow">
+        <h4 class="text-xl font-bold mb-2">Social Media Marketing</h4>
+        <p class="text-gray-300">Grow your brand and reach on Facebook, Instagram & more. Options for content and ad management.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 px-6 bg-gray-800">
+    <h3 class="text-3xl font-bold text-center mb-10">Pricing</h3>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-gray-900 p-6 rounded-lg shadow border border-gray-700">
+        <h4 class="text-xl font-bold mb-2">Starter Site</h4>
+        <p class="mb-4 text-gray-400">Perfect for tradies, cafés & freelancers.</p>
+        <p class="text-2xl font-bold text-green-400 mb-4">$799 NZD</p>
+        <ul class="text-sm text-gray-300 mb-4 space-y-1">
+          <li>✔ One-page design</li>
+          <li>✔ Mobile-friendly</li>
+          <li>✔ Contact form</li>
+        </ul>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-lg shadow border border-green-500">
+        <h4 class="text-xl font-bold mb-2">Business Pro</h4>
+        <p class="mb-4 text-gray-400">For established service businesses & online sellers.</p>
+        <p class="text-2xl font-bold text-green-400 mb-4">$1,499 NZD</p>
+        <ul class="text-sm text-gray-300 mb-4 space-y-1">
+          <li>✔ Multi-page site</li>
+          <li>✔ Online store</li>
+          <li>✔ SEO + social integrations</li>
+        </ul>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-lg shadow border border-gray-700">
+        <h4 class="text-xl font-bold mb-2">Monthly Support</h4>
+        <p class="mb-4 text-gray-400">Ongoing help, updates, learning & consulting.</p>
+        <p class="text-2xl font-bold text-green-400 mb-4">From $129/mo</p>
+        <ul class="text-sm text-gray-300 mb-4 space-y-1">
+          <li>✔ Content updates</li>
+          <li>✔ SEO & social help</li>
+          <li>✔ Learning & consulting support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6">
+    <h3 class="text-3xl font-bold text-center mb-10">Contact Us</h3>
+    <form name="contact" method="POST" data-netlify="true" class="max-w-xl mx-auto space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-gray-800 border border-gray-700 text-white">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-gray-800 border border-gray-700 text-white">
+      <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 rounded bg-gray-800 border border-gray-700 text-white"></textarea>
+      <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded">Send Message</button>
+    </form>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/64204718577" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.79 11.79 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.11 1.6 5.92L0 24l6.3-1.65A11.87 11.87 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.18-3.48-8.52zM12 22a9.86 9.86 0 0 1-5-1.33l-.36-.2-3.73.97.98-3.63-.24-.37A9.92 9.92 0 0 1 2 12c0-5.53 4.47-10 10-10s10 4.47 10 10-4.47 10-10 10zm5.12-7.65c-.28-.14-1.65-.81-1.9-.9-.25-.09-.44-.14-.63.14s-.72.9-.88 1.08-.33.21-.6.07a8.15 8.15 0 0 1-2.4-1.47 9.15 9.15 0 0 1-1.7-2.1c-.18-.3-.02-.46.13-.6.13-.14.3-.36.45-.54.15-.18.2-.3.3-.49.1-.18.05-.36-.02-.5-.07-.13-.63-1.52-.87-2.09-.23-.54-.46-.47-.63-.48h-.54c-.18 0-.47.07-.72.36s-.95.92-.95 2.24c0 1.33.98 2.62 1.12 2.8.14.18 1.93 3.03 4.68 4.24.65.28 1.15.45 1.54.58.65.2 1.23.17 1.7.1.52-.08 1.65-.67 1.89-1.3.23-.63.23-1.17.16-1.3-.07-.14-.26-.22-.54-.36z" />
+    </svg>
+  </a>
+</body>
+</html>
